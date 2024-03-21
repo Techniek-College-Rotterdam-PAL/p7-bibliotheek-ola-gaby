@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-require_once "conn.php"; // database connectie (Gaby)
+require_once "Database/Conn.php"; // database connectie (Gaby)
 
 // Zorg ervoor dat alle ingevoerde code eruit wordt gehaald(Gaby)
 $voornaam = strip_tags($_POST["voornaam"]);

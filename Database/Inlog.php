@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    require_once "conn.php"; // database connectie (Ola)
+    require_once "Database/Conn.php"; // database connectie (Ola)
     
     $gebruikersnaam = strip_tags($_POST["gebruikersnaam"]);
     $wachtwoord = strip_tags($_POST["wachtwoord"]);
