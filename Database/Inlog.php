@@ -1,12 +1,12 @@
 <?php 
     session_start();
-    require_once "Database/Conn.php"; // database connectie (Ola)
+    require_once "Conn.php"; // database connectie (Ola)
     
     $gebruikersnaam = strip_tags($_POST["gebruikersnaam"]);
     $wachtwoord = strip_tags($_POST["wachtwoord"]);
 
     $_SESSION["gebruikersnaam"] = $gebruikersnaam;
-    echo "$gebruikersnaam en $wachtwoord"; 
+    echo "$gebruikersnaam"; 
 
     //gebruikersnaam ophalen uit de database zodat het later op de pagina kan worden weergegeven (Ola)
     $query = $conn->prepare("SELECT * FROM gebruiker WHERE gebruikersnaam = :gebruikersnaam");
