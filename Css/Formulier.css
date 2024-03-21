@@ -1,0 +1,16 @@
+.formulier {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    background-color: aqua;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+form input {
+    padding: 10px;
+}
+
+form input[type=sumbit]{
+    width: fit-content;
+}
