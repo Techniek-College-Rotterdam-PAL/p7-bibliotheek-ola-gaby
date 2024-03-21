@@ -8,7 +8,7 @@
     $_SESSION["gebruikersnaam"] = $gebruikersnaam;
     echo "$gebruikersnaam en $wachtwoord"; 
 
-    //gebruikersnaam ophalen uit de database zodat het later op de pagina kan worden weergegeven 
+    //gebruikersnaam ophalen uit de database zodat het later op de pagina kan worden weergegeven (Ola)
     $query = $conn->prepare("SELECT * FROM gebruiker WHERE gebruikersnaam = :gebruikersnaam");
     $query->bindParam(":gebruikersnaam", $gebruikersnaam);
     $query->execute();

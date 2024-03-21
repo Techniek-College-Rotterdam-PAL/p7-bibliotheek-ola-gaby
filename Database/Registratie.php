@@ -3,6 +3,7 @@
 session_start();
 require_once "conn.php"; // database connectie (Gaby)
 
+// Zorg ervoor dat alle ingevoerde code eruit wordt gehaald(Gaby)
 $voornaam = strip_tags($_POST["voornaam"]);
 $achternaam = strip_tags($_POST["achternaam"]);
 $email = strip_tags($_POST["email"]);
@@ -12,7 +13,7 @@ $wachtwoord = strip_tags($_POST["wachtwoord"]);
 
 
 
-
+// Plaats de ingevulde gegevens in de database (Gaby)
 $insert_user = $conn->prepare("INSERT INTO gebruiker (voornaam,achternaam,email,telefoonnummer,gebruikersnaam, wachtwoord) VALUES( :voornaam, :achternaam, :email, :telefoonnummer, :gebruikersnaam, :wachtwoord)");
 
     $insert_user->bindParam(":voornaam", $voornaam);

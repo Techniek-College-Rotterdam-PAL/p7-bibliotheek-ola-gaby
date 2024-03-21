@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<nav>
+<nav> <!-- Navigatie (Gaby)---> 
     <ul> <i class="fa-solid fa-star"></i><li><a href="Hoofdpagina.php">Hoofdpagina</a></li> </ul> 
     <ul> <li><a href="Boekenpagina.php">Boeken</a></li> </ul> 
     <ul> <li><a href="Loginpagina.php">Login</a></li> </ul> 
