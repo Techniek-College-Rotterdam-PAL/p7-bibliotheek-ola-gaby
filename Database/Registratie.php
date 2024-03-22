@@ -31,7 +31,7 @@ $insert_user = $conn->prepare("INSERT INTO gebruiker (voornaam,achternaam,email,
     //--------------------------------------------------------------------------------------
 
 
- $insert_user->execute(header("location: logged_in_user.php"));
+ $insert_user->execute(header("location: ../Ingelogde_gebruiker.php"));
   
 
 

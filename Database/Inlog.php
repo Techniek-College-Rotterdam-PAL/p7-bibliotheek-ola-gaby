@@ -12,18 +12,18 @@
     $query = $conn->prepare("SELECT * FROM gebruiker WHERE gebruikersnaam = :gebruikersnaam");
     $query->bindParam(":gebruikersnaam", $gebruikersnaam);
     $query->execute();
+    $result = $query->fetch(PDO::FETCH_ASSOC);
 
     //
-    if ($query->rowCount() == 1) {
+    if ($result) {
     
-         $result = $query->fetch(PDO::FETCH_ASSOC);
 
     
         //code om de gebruikersnaam in de header van de pagina te laten zien (Ola)
         if (password_verify($wachtwoord, $result['wachtwoord'])) {
          $_SESSION["gebruikersnaam"] = $gebruikersnaam;
         
-         header("location: logged_in_user.php");
+         header("location: ../Ingelogde_gebruiker.php");
 
         //bij foute inloggegeven komt er een foutmelding op het scherm (Ola)
          } else {
