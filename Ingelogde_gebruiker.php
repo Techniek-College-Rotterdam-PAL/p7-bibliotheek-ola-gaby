@@ -1,7 +1,7 @@
 <?php
-
 session_start();
-require_once "Conn.php";
+require_once "Database/Conn.php";
+
 $sql = "SELECT * FROM gebruiker WHERE gebruikersnaam = :un";
   $stmt = $conn->prepare($sql);
   $stmt->execute(["un" => $_SESSION["gebruikersnaam"]]);
@@ -26,13 +26,24 @@ $_SESSION["email"] = $account_email;
     <title>Hoofdpagina</title>
 </head>
 <body>
-
 <nav> <!-- Navigatie (Gaby)---> 
     <ul> <i class="fa-solid fa-star"></i><li><a href="Hoofdpagina.php">Hoofdpagina</a></li> </ul> 
     <ul> <li><a href="Boekenpagina.php">Boeken</a></li> </ul> 
-    <ul> <li><a href="Loginpagina.php">Login</a></li> </ul> 
-    <ul> <li><a href="Registratiepagina.php">Registreer</a></li> </ul>  
+    <ul> <li><a href="ProfielBewerken.php">Profiel Bewerken </a></li></ul> 
 </nav> 
+
+<h1>Welkom terug 
+   <?php echo "$_SESSION[gebruikersnaam]";
+ ?> 
+</h1>
+
+
+
+
+
+
+
+
 
 </body>
 </html>

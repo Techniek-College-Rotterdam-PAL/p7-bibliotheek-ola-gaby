@@ -16,5 +16,29 @@
     <ul> <li><a href="Registratiepagina.php">Registreer</a></li> </ul>  
 </nav> 
 
+<main>
+    <div class="centered"> <!-- Zrogt ervoor dat de card in de midden is geplaats -->
+            <article class="cards">
+                <a href="Boekenpagina.php">
+                    <figure>
+                        <img src="Afbeeldingen/1.5.1_Img.png" alt=""/>
+                    </figure>
+                    <div class="card-content">
+                        <h2>Header</h2>
+                        <p>
+                           Voor de layout op de pagina gebruiken we een 
+                            card. Een card wordt vaak gebruikt  voor een 
+                            onderwerp.
+                        </p>
+                    </div><!-- .card-content -->
+                </a>
+            </article><!-- .card -->
+    </div>
+</main>
+
+
+
+
+
 </body>
 </html>

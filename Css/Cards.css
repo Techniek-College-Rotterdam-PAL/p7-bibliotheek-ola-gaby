@@ -1,0 +1,28 @@
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    padding: 10px;
+}
+
+img {
+    width: 80%;
+    height: auto;
+    border: 5px solid black;
+}
+
+figure {
+  padding: 5px;
+}
+
+
+/*-------cards------------*/
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: red;
+    border: 5px solid black;
+}
