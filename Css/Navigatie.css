@@ -1,9 +1,15 @@
 nav {
-    height: 30px;
+    height: 90px;
     margin-left: 10px;
     position: sticky;
     display: inline-flex;
+    margin: 0px;
+    padding: 0px;
     top: 0;
+    background-color:  rgb(97, 2, 2);
+    width: 100%;
+    border-bottom: 10px solid black;
+
 }
 
 nav ul {
@@ -19,7 +25,11 @@ nav ul li
 }
 
 nav ul li a {
-
+    font-weight:bolder;
     text-decoration: none;
     color: black;
 }   
+
+nav ul  li a:hover {
+   box-shadow: 4px 4px rgb(231, 227, 227);
+}

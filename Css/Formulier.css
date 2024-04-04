@@ -1,14 +1,26 @@
 .formulier {
     display: flex;
+    justify-content: center;
     padding: 30px;
     flex-direction: column;
-    background-color: aqua;
+    background-color: rgb(97, 2, 2);
     border-radius: 10px;
     font-size: 30px;
+    font-weight: bold;
+    width: 80%;
+}
+
+.formulier label {
+    margin-top: 20px;
 }
 
 form input {
+    margin-top: 20px;
     padding: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color:  rgb(231, 227, 227);
+    color: black;
 }
 
 form input[type=sumbit]{

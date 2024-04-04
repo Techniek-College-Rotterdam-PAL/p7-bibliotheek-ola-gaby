@@ -2,3 +2,17 @@
 @import "Css/Formulier.css"; 
 @import "Css/Navigatie.css"; 
 @import "Css/Cards.css"; 
+@import "Css/Footer.css";
+@import "Css/Article.css";
+
+
+body {
+    margin: 0%;
+    background-color: black;
+}
+
+body h1 {
+    color: white;
+    font-size: 50px;
+    text-shadow: 4px 1px rgb(97, 2, 2);
+}

@@ -1,0 +1,16 @@
+footer {
+    background-color: black;
+    max-width: 100%;
+    min-height: fit-content;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px rgb(97, 2, 2) solid;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 30px;
+    color: rgb(231, 227, 227);
+}

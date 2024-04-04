@@ -25,6 +25,14 @@
         <input type="password" id="wachtwoord" name="wachtwoord" required>
 
         <input type="submit" name="submit" value="Inloggen">
-    </from>
+    </form>
+
+    <footer> <!-- footer (Gaby) --> 
+    <p>   
+        Heb je een vraag? Mail dan naar BoekenBieb@outlook.com.
+        <br>
+         Wij zijn op de mail bereikbaar op maandag t/m vrijdag van 11:00 tot 16:00 uur. 
+    </p>
+</footer>
 </body>
 </html>
