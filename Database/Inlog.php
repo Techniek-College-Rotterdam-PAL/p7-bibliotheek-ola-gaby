@@ -27,7 +27,7 @@
 
         //bij foute inloggegeven komt er een foutmelding op het scherm (Ola)
          } else {
-          header("location: fout_inlog_formulier.php");
+          header("location: ../FoutInlogFormulier.php");
          }
 } 
 ?>

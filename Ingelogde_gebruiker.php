@@ -27,7 +27,7 @@ $_SESSION["email"] = $account_email;
 </head>
 <body>
 <nav> <!-- Navigatie (Gaby)---> 
-    <ul> <i class="fa-solid fa-star"></i><li><a href="Hoofdpagina.php">Hoofdpagina</a></li> </ul> 
+    <ul> <i class="fa-solid fa-star"></i><li><a href="Ingelogde_gebruiker.php">Hoofdpagina</a></li> </ul> 
     <ul> <li><a href="Boekenpagina.php">Boeken</a></li> </ul> 
     <ul> <li><a href="ProfielBewerken.php">Profiel Bewerken </a></li></ul> 
 </nav> 
