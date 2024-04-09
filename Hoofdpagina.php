@@ -42,7 +42,7 @@
             <article class="cards">
                 <a href="Boekenpagina.php">
                     <figure>
-                        <img src="Afbeeldingen/1.5.1_Img.png" alt=""/>
+                        <img src="Afbeeldingen/Harry-Potter-en-de-gevangene-van-Azkaban.png" alt="Hard cover van het boek Harry Potter en de gevangene van Azkaban"/>
                     </figure>
                     <div class="card-content">
                         <h2> Harry Potter en de gevangene van Azkaban</h2>
@@ -61,7 +61,7 @@
             <article class="cards">
                 <a href="Boekenpagina.php">
                     <figure>
-                        <img src="Afbeeldingen/1.5.1_Img.png" alt=""/>
+                        <img src="Afbeeldingen/Atlas-the-Story-of-Pa-Salt.png" alt="cover van het boek Atlas the Story of Pa Salt"/>
                     </figure>
                     <div class="card-content">
                         <h2> Atlas: the Story of Pa Salt</h2>
@@ -80,7 +80,7 @@
             <article class="cards">
                 <a href="Boekenpagina.php">
                     <figure>
-                        <img src="Afbeeldingen/1.5.1_Img.png" alt=""/>
+                        <img src="Afbeeldingen/Eén-raam-geen-sleutel.png" alt="Cover van Eén raam geen sleutel"/>
                     </figure>
                     <div class="card-content">
                         <h2>Eén raam, geen sleutel</h2>

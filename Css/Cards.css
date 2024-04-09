@@ -23,7 +23,7 @@ main {
 }
 
 .BoekenCards img {
-    width: 300px;
+    width: 200px;
     height: auto;
     border: 5px solid black;
 }
@@ -37,7 +37,7 @@ figure {
 /*-------cards------------*/
 .cards {
     display: flex;
-    height: 510px;
+    height: fit-content;
     width: 900px;
     flex-wrap: wrap;
     background-color: rgb(97, 2, 2);
