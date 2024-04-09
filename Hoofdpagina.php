@@ -21,7 +21,7 @@
          <div class="Flex"> <!-- Om img en p naast elkaar te zetten (Gaby)-->
              <img src="Afbeeldingen/Img_OpenBoek.png" alt="Afbeelding van een openboek ">
               <p> 
-                 Boeken bieb is opgericht om studenten die het wat minder hebben te helpen met het verminderen van boeken kosten. Op deze website kan je verschillde boeken vinden die je als student zou kunnen gebruikeren of willen lezen. 
+                 Boeken bieb is opgericht om studenten die het wat minder hebben te helpen met het verminderen van boeken kosten. Op deze website kan je verschillde boeken vinden die je als student zou kunnen gebruiken of willen lezen. 
                  <br> <br> <!-- Zorgt voor een break in de text (Gaby)--> 
                  Als je student bij het techniek college rotterdam bent, kan je makkelijk boeken van onze site lenen zonder einige kosten. Kijk nu in onze boekenlijst en leen je eerste boek!
               </p>
