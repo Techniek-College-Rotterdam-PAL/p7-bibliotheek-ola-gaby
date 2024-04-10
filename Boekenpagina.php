@@ -2,9 +2,9 @@
 
 class Database {
     private $servername = "localhost";
-    private $username = "gebruikersnaam";
+    private $username = "root";
     private $password = "";
-    private $dbname = "databasenaam";
+    private $dbname = "project5";
     public $conn;
 
     // Maak de verbinding

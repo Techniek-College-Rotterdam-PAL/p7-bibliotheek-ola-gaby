@@ -20,7 +20,7 @@ $insert_user = $conn->prepare("INSERT INTO ////// (boeken, begindatum, einddatum
     $insert_user->bindParam(":begindatum", $begindatum);
     $insert_user->bindParam(":einddatum", $einddatum);
   
-
+//Gegevens ophalen uit de daatabase om het vervolgens in een overzicht te zetten voor de docent zodat hij kan zien wie welke boek heeft uitgeleend (Ola)
     $query = $conn->prepare("SELECT * FROM gebruiker WHERE gebruikersnaam = :gebruikersnaam");
     $query->bindParam(":gebruikersnaam", $gebruikersnaam);
     $query->execute();
@@ -28,9 +28,7 @@ $insert_user = $conn->prepare("INSERT INTO ////// (boeken, begindatum, einddatum
 
     //
     if ($result) {
-    
 
-    
         //code om de gebruikersnaam in de header van de pagina te laten zien (Ola)
         if (password_verify($wachtwoord, $result['wachtwoord'])) {
          $_SESSION["gebruikersnaam"] = $gebruikersnaam;
