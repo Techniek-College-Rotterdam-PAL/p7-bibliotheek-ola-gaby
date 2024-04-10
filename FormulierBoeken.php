@@ -40,6 +40,8 @@
              </select>
              <label for="datum">Uitleen datum:</label>
              <input type="date" id="datum" name="datum">
+             <label for="datum">Einddatum:</label>
+             <input type="date" id="einddatum" name="datum">
 
 
         <input type="submit" name="submit" value="Verstuur">
