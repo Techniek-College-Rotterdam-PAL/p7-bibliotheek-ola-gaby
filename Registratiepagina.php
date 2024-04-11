@@ -9,7 +9,7 @@
 </head>
 <body>
 <nav>
-    <ul> <li><a href="Hoofdpagina.php">Hoofdpagina</a></li> </ul> 
+    <ul> <li><a href="Hoofdpagina.php">Hoofdpagina</a></li> </ul>   
     <ul> <li><a href="Boekenpagina.php">Boeken</a></li> </ul> 
     <ul><li><a href="Loginpagina.php">Login</a></li> </ul> 
     <ul>  <i class="fa-solid fa-star"></i> <li><a href="Registratiepagina.php">Registreer</a></li> </ul>  
@@ -25,7 +25,7 @@
         <input type="text" id="achternaam" name="achternaam" required>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required onfocusout="validateForm()">
 
         <label for="telefoonnummer">Telefoonnummer</label>
         <input type="tel" id="telefoonnummer" name="telefoonnummer" required>
@@ -44,16 +44,16 @@
     <script>
         function validateForm() {
             var emailInput = document.getElementById("email").value;
-            var emailVolgorde = /^[a-zA-Z0-9._%+-]+@(?:student\.zadkine\.nl|tcrmbo\.nl)$/; // Adjust this pattern as needed
+            var emailVolgorde = /^[a-zA-Z0-9._%+-]+@(?:student\.zadkine\.nl|tcrmbo\.nl)$/;
+            if (!emailVolgorde.test(emailInput)) {
+                alert("Registratie alleen mogelijk met een geldige studenten- of docentenemail.");
+            }};
 
     // Kijken of de email het zelfde is als de volgorde  die aangehouden moet worden
-    if (!emailVolgorde.test(emailInput)) {
-        alert("Registratie alleen mogelijk met een geldige studenten- of docentenemail.");
-        return false; //Geen toegang tot de website 
-    }
+     
+    
+   
 
-    return true; // toegang tot de website met de juiste gegevens
-    }
     </script>
 
     <footer> <!-- footer (Gaby) --> 

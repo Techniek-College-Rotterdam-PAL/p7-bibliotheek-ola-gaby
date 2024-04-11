@@ -18,14 +18,13 @@
     if ($result) {
     
 
-    
         //code om de gebruikersnaam in de header van de pagina te laten zien (Ola)
         if (password_verify($wachtwoord, $result['wachtwoord'])) {
          $_SESSION["gebruikersnaam"] = $gebruikersnaam;
         
          header("location: ../Ingelogde_gebruiker.php");
 
-        //bij foute inloggegeven komt er een foutmelding op het scherm (Ola)
+        //bij foute inloggegeven wordt je gestuurd naar een foutinlogformulier pagina (Ola)
          } else {
           header("location: ../FoutInlogFormulier.php");
          }
