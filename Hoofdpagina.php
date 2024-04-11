@@ -13,7 +13,12 @@
     <ul> <i class="fa-solid fa-star"></i><li><a href="Hoofdpagina.php">Hoofdpagina</a></li> </ul> 
     <ul> <li><a href="Boekenpagina.php">Boeken</a></li> </ul> 
     <ul> <li><a href="Loginpagina.php">Login</a></li> </ul> 
-    <ul> <li><a href="Registratiepagina.php">Registreer</a></li> </ul>  
+    <ul> <li><a href="Registratiepagina.php">Registreer</a></li> </ul>
+    <!-- Searchbar toegevoegd in de navigatie (Ola)--->
+    <form action="/">
+      <input type="text" placeholder="Zoeken.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
 </nav> 
 
     <article>
