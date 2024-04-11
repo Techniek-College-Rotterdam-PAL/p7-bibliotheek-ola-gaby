@@ -40,6 +40,22 @@
 
     </form> 
 
+    <!-- code om alleen met een studenten email of een docenten email te kunnen registreren (Ola) --> 
+    <script>
+        function validateForm() {
+            var emailInput = document.getElementById("email").value;
+            var emailVolgorde = /^[a-zA-Z0-9._%+-]+@(?:student\.zadkine\.nl|tcrmbo\.nl)$/; // Adjust this pattern as needed
+
+    // Kijken of de email het zelfde is als de volgorde  die aangehouden moet worden
+    if (!emailVolgorde.test(emailInput)) {
+        alert("Registratie alleen mogelijk met een geldige studenten- of docentenemail.");
+        return false; //Geen toegang tot de website 
+    }
+
+    return true; // toegang tot de website met de juiste gegevens
+    }
+    </script>
+
     <footer> <!-- footer (Gaby) --> 
     <p>   
         Heb je een vraag? Mail dan naar BoekenBieb@outlook.com.
