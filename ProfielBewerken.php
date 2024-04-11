@@ -20,10 +20,11 @@ require_once "Database/Conn.php";
     <ul> <i class="fa-solid fa-star"></i><li><a href="ProfielBewerken.php">Profiel Bewerken </a></li></ul> 
 </nav> 
 
-<h1>Welkom terug 
+<h1>Welkom  
    <?php echo "$_SESSION[gebruikersnaam]";
  ?> 
 </h1>
+<p>Vul de formulier hieronder in om je gebruikersnaam te veranderen </p> 
 <div class="profiel"> 
 <?php
 
