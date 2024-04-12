@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/ecd9dddd0d.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registreren</title>
+    <title>Student Registreren</title>
     <link rel="stylesheet" href="../hoofdCss.css">
 </head>
 <body>
@@ -30,7 +30,7 @@
     <h1> Registratie formulier voor studenten </h1> 
     <p div class="midden">Vul de formulier hieronder in om te registeren als student </p>
       <div class="midden"> 
-    <form class="formulier" action="../Database/Registratie.php" method="post"> 
+    <form class="formulier" action="../Database/RegistratieStudent.php" method="post"> 
         <label for="voornaam">Voornaam</label>
         <input type="text" id="voornaam" name="voornaam" required>
 
@@ -55,9 +55,9 @@
     <script>
         function validateForm() {
             var emailInput = document.getElementById("email").value;
-            var emailVolgorde = /^[a-zA-Z0-9._%+-]+@(?:student\.zadkine\.nl|tcrmbo\.nl)$/;
+            var emailVolgorde = /^[a-zA-Z0-9._%+-]+@(?:student\.zadkine\.nl)$/;
             if (!emailVolgorde.test(emailInput)) {
-                alert("Registratie alleen mogelijk met een geldige studenten- of docentenemail.");
+                alert("Registratie alleen mogelijk met een geldige studentenmail!.");
             }};
 
     // Kijken of de email het zelfde is als de volgorde  die aangehouden moet worden

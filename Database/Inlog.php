@@ -42,8 +42,15 @@ if (isset($_POST['submit'])) {
         header("location: ../Ingelogde_student.php");
         // Redirect the user to another page or perform further actions upon successful login
     } else {
-        echo "Invalid email or password!";
-        // Handle invalid login attempt, show error message, or redirect to login page
+
+       
+
+        echo '<script type="text/javascript">'; 
+        echo 'alert("Verkeerde email of wachtwoord! Probeer opnieuw");';
+        echo 'window.location.href = "../Login-Registreer/LoginStudent.php";';
+        echo '</script>';
+    
+      
     }
 }
 ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "Database/Conn.php";
+require_once "Database/Conn2.php";
 
 ?>
 
@@ -43,6 +43,8 @@ require_once "Database/Conn.php";
 
       $resultaat = $query->fetchAll();
       foreach ($resultaat as $account) {
+
+        
         // Stuurt de gegevens naar ProfielBewerkenData + profiel bewerken formulier (Gaby)
         echo '<div class="post">
         <form class="formulier" action="Database/ProfielBewerkenData.php" method="post"> 
