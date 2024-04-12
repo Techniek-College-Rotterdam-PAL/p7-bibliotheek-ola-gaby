@@ -43,7 +43,7 @@ try {
         <li> <a href="">lijst </a> </li>
         <li> <a href="">Lenen lijst</a> </li>
         <li> <a href="">Reserveren lijst</a> </li>
-        <li> <a href="Database/BoekenInvoeren.php">Boek Invoeren</a> </li>
+        <li> <a href="Formulier/DocentBoekenInvoeren.php">Boek Invoeren</a> </li>
     </ul>
     </div>
 </nav> 

@@ -7,7 +7,7 @@ require_once "Conn2.php"; // database connectie (Ola)
 $naam = strip_tags($_POST["Naam"]);
 $auteur = strip_tags($_POST["Auteur"]);
 $samenvatting = strip_tags($_POST["Samenvatting"]);
-$afbeelding = strip_tags($_POST["afbeelding"]);
+//$afbeelding = strip_tags($_POST["afbeelding"]);
 
 
 
@@ -17,7 +17,7 @@ $insert_user = $conn->prepare("INSERT INTO boeken (Naam,Auteur,Samenvatting,afbe
     $insert_user->bindParam(":Naam", $naam);
     $insert_user->bindParam(":Auteur", $auteur);
     $insert_user->bindParam(":Samenvatting", $samenvatting);
-    $insert_user->bindParam(":afbeelding", $afbeelding);
+   // $insert_user->bindParam(":afbeelding", $afbeelding);
     $insert_user->bindParam(":gebruikersnaam", $gebruikersnaam);
     $insert_user->bindParam(":wachtwoord", $hashed_wachtwoord);
 
