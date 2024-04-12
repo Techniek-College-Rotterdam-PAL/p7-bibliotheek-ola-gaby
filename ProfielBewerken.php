@@ -32,7 +32,7 @@ require_once "Database/Conn.php";
    <?php echo "$_SESSION[gebruikersnaam]";
  ?> 
 </h1>
-<p div class="midden">Vul de formulier hieronder in om je gebruikersnaam te veranderen </p> 
+<p>Vul de formulier hieronder in om je gebruikersnaam te veranderen </p> 
 <div class="profiel"> 
 <?php
 

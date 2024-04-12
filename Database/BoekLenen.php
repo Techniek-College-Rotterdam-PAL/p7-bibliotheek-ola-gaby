@@ -14,7 +14,7 @@ $einddatum = strip_tags($_POST["einddatum"]);
 
 
 // Plaats de ingevulde gegevens in de database (Ola)
-$insert_user = $conn->prepare("INSERT INTO lenen (boeken, begindatum, einddatum) VALUES( :boeken, :begindatum, :einddatum )");
+$insert_user = $conn->prepare("INSERT INTO ////// (boeken, begindatum, einddatum) VALUES( :boeken, :begindatum, :einddatum )");
 
     $insert_user->bindParam(":boeken", $boeken);
     $insert_user->bindParam(":begindatum", $begindatum);
