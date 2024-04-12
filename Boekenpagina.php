@@ -81,3 +81,33 @@ $books = $book->getAllBooks();
 $book->displayBooks($books);
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/ecd9dddd0d.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="HoofdCss.css">
+    <title>Boeken pagina</title>
+</head>
+<body>
+
+<nav> <!-- Navigatie (Gaby)---> 
+    <ul> <li><a href="Ingelogde_student.php">Hoofdpagina</a></li> </ul> 
+    
+    <div class="dropdown"> <!-- Dropdown boeken --> 
+        <button class="navButton">Boeken</button>
+    <ul class="subDropdown">
+         <i class="fa-solid fa-star"></i><li> <a href="Boekenpagina.php">Bekijken</a> </li>
+        <li> <a href="Formulier/FormulierBoeken.php">Lenen</a> </li>
+        <li> <a href="Formulier/FormulierReserverenBoeken.php">Reserveren</a> </li>
+    </ul>
+    </div>
+    <ul> <li><a href="ProfielBewerken.php">Profiel Bewerken </a></li></ul> 
+</nav> 
+
+
+</body>
+</html>

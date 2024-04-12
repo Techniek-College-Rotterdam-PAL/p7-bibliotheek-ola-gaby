@@ -33,3 +33,37 @@ nav ul li a {
 nav ul  li a:hover {
    box-shadow: 4px 4px rgb(231, 227, 227);
 }
+
+
+.navButton {
+    height:fit-content;
+    width: fit-content;
+    margin-left: 50px;
+    font-weight: bolder;
+    font-size: 30px;
+    color:black;
+    border:none;
+    font-size: 40px;
+    background: inherit;
+}
+
+.navButton:hover {
+    box-shadow: 4px 4px rgb(231, 227, 227);
+}
+
+.dropdown {
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.subDropdown {
+    display: none;
+    position: absolute;
+    align-items: center;
+}
+
+.dropdown:hover .subDropdown{
+    display: block;
+    background: rgb(97, 2, 2); 
+    
+}
