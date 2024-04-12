@@ -47,8 +47,8 @@
                   <option value="De Joodsche Raad">De Joodsche Raad</option>
                 <option value=""></option>
              </select>
-             <label for="datum">Uitleen datum:</label>
-             <input type="date" id="datum" name="datum">
+             <label for="begindatum">Begindatum:</label>
+             <input type="date" id="begindatum" name="begindatum">
              <label for="datum">Einddatum:</label>
              <input type="date" id="einddatum" name="datum">
 

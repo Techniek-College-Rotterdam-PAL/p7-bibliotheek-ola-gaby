@@ -29,9 +29,11 @@
     </div>
 
     <form action="/">  <!-- Searchbar toegevoegd in de navigatie (Ola)--->
-      <input type="text" placeholder="Zoeken.." name="search">
+      <input type="text" id="searchInput" onkeyup="searchBooks()" placeholder="Search for books...">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
+    
+    <script src="zoekbalk.js"></script>
 
 </nav>
 

@@ -35,9 +35,9 @@
 <div class="book-container">
         <?php
             $db = new Database();
-            $book = new Book($db);
-            $books = $book->getAllBooks();
-            $book->displayBooks($books);
+            $boek = new Boek($db);
+            $boeken = $boek->getAllboeken();
+            $book->displayboeken$boeken($boeken);
         ?>
     </div>
  
@@ -71,7 +71,7 @@ class Database {
     }
 }
  
-class Book {
+class Boek {
     private $db;
  
     public function __construct($db) {
@@ -79,21 +79,21 @@ class Book {
     }
  
     // Haal alle boeken op uit de database
-    public function getAllBooks() {
-        $sql = "SELECT * FROM boeken";
+    public function getAllBoek() {
+        $sql = "SELECT * FROM uitgeleend";
         $stmt = $this->db->conn->query($sql);
-        $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $books;
+        $boeken = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $boeken;
     }
     // Toon boeken
-    public function displayBooks($books) {
-        foreach ($books as $book) {
+    public function displayboeken$boeken($boeken) {
+        foreach ($boeken as $boek) {
             echo "<div class='book'>";
-            echo '<img src="data:image/jpeg;base64,'.base64_encode($book['afbeelding']) .'" />';
-            echo "<h2>" . $book['Naam'] . "</h2>";
-            echo "<p>Auteur: " . $book['Auteur'] . "</p>";
-            echo "<p>Taal: " . $book['Taal'] . "</p>";
-            echo "<p>Samenvatting: " . $book['Samenvatting'] . "</p>";
+            echo "<h2>" . $boek['gebruikersnaam'] . "</h2>";
+            echo "<p>Auteur: " . $boek['email'] . "</p>";
+            echo "<p>Taal: " . $boek['boeken'] . "</p>";
+            echo "<p>Samenvatting: " . $boek['begindatum'] . "</p>";
+            echo "<p>Samenvatting: " . $boek['einddatum'] . "</p>";
             echo "</div>";
         }
     }

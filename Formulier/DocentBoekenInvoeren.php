@@ -1,21 +1,3 @@
-<?php
-session_start();
-require_once "Database/Conn.php";
-
-$stmt = "SELECT * FROM gebruiker WHERE gebruikersnaam = :un";
-  $stmt = $conn->prepare($stmt);
-  $stmt->execute(["un" => $_SESSION["gebruikersnaam"]]);
-  $account_data = $stmt->fetch(PDO::FETCH_OBJ);
-
-$gebruikersnaam = $account_data->gebruikersnaam;
-$account_email = $account_data->email;
-$account_id = $account_data->id;
-
-$_SESSION["gebruikersnaam"] = $gebruikersnaam;
-$_SESSION["account_id"] = $account_id;
-$_SESSION["email"] = $account_email;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,10 +22,30 @@ $_SESSION["email"] = $account_email;
     </div>
 </nav> 
 
-<h1>Welkom terug 
+<h1>
    <?php echo "$_SESSION[gebruikersnaam]";
  ?> 
 </h1>
+<h1> Boek Invoeren </h1> 
+<p div class="midden">Vul de formulier hieronder in om een nieuwe boek in te voeren </p>
+     <div class="midden"> 
+    <form class="formulier" action="../Database/BoekenInvoeren.php" method="post"> 
+        <label for="gebruikersnaam">Naam</label>
+        <input type="text" id="gebruikersnaam" name="gebruikersnaam" required>
+
+        <label for="wachtwoord">Auteur</label>
+        <input type="password" id="wachtwoord" name="wachtwoord" required>
+
+        <label for="email">Samenvatting</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="afbeelding">Afbeelding</label>
+        <input type="file" id="afbeelding" name="afbeelding"> 
+
+
+        <input type="submit" name="submit" value="Verstuur">
+</div> 
+    </form> 
 
 </body>
 </html>
