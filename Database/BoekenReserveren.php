@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once "Conn.php";
+require_once "Conn2.php";
 
 // Zorg ervoor dat alle ingevoerde code eruit wordt gehaald(Gaby)
 $gebruikersnaam = strip_tags($_POST["gebruikersnaam"]);
@@ -19,25 +19,28 @@ $insert_user = $conn->prepare("INSERT INTO reserveren (boeken, begindatum, eindd
     $insert_user->bindParam(":boeken", $boeken);
     $insert_user->bindParam(":begindatum", $begindatum);
     $insert_user->bindParam(":einddatum", $einddatum);
+
+    $_SESSION["email"] = $email;
+   
+
   
-//Gegevens ophalen uit de daatabase om het vervolgens in een overzicht te zetten voor de docent zodat hij kan zien wie welke boek heeft uitgeleend (Ola)
-    $query = $conn->prepare("SELECT * FROM gebruiker WHERE gebruikersnaam = :gebruikersnaam");
-    $query->bindParam(":gebruikersnaam", $gebruikersnaam);
-    $query->execute();
-    $result = $query->fetch(PDO::FETCH_ASSOC);
-
-    //
-    if ($result) {
-
-        //code om de gebruikersnaam in de header van de pagina te laten zien (Gaby)
-        if (password_verify($wachtwoord, $result['wachtwoord'])) {
-         $_SESSION["gebruikersnaam"] = $gebruikersnaam;
+  
+    if ($insert_user->execute()) {
+    
         
-         header("location: ../Ingelogde_student.php");
+         echo '<script type="text/javascript">'; 
+         echo 'alert("Het is gelukt om je boek te reserveren!");';
+         echo 'window.location.href = "../Formulier/FormulierReserverenBoeken.php;';
+         echo '</script>';
 
         //bij foute inloggegeven komt er een foutmelding op het scherm (Gaby)
          } else {
-          header("location: ../FoutInlogFormulier.php");
+        
+            echo '<script type="text/javascript">'; 
+            echo 'alert("Het is niet gelukt om je boek te reserveren!Probeer opnieuw");';
+            echo 'window.location.href = "../Formulier/FormulierReserverenBoeken.php;';
+            echo '</script>';
          }
-} 
+        
+ 
 ?>

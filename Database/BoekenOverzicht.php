@@ -38,7 +38,7 @@
             $boek = new Boek($db);
             $boeken = $boek->getAllboeken();
             $book->displayboeken
-        $boeken($boeken);
+             $boeken($boeken);
             $book->displayBoek($boeken);
         ?>
     </div>

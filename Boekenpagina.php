@@ -30,7 +30,6 @@
         <li> <a href="Formulier/FormulierReserverenBoeken.php">Reserveren</a> </li>
     </ul>
     </div>
-    <ul> <li><a href="ProfielBewerken.php">Profiel Bewerken </a></li></ul> 
 </nav> 
 <div class="book-container">
         <?php

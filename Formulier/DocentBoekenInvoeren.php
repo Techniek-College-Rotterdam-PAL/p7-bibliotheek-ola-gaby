@@ -5,19 +5,19 @@
     <script src="https://kit.fontawesome.com/ecd9dddd0d.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../HoofdCss.css">
-    <title>Hoofdpagina</title>
+    <title>Docent boeken Invoeren</title>
 </head>
 <body>
 <nav> <!-- Navigatie (Gaby)---> 
-    <ul> <i class="fa-solid fa-star"></i><li><a href="Ingelogde_docent.php">Hoofdpagina</a></li> </ul> 
+    <ul> <li> <a href="../Ingelogde_docent.php">Hoofdpagina</a></li> </ul> 
     
     <div class="dropdown"> <!-- Dropdown boeken --> 
         <button class="navButton">Boeken</button>
     <ul class="subDropdown">
-        <li> <a href="Boekenpagina.php">Bekijken</a> </li>
-        <li> <a href="Formulier/FormulierBoeken.php">Lenen</a> </li>
-        <li> <a href="Formulier/FormulierReserverenBoeken.php">Reserveren</a> </li>
-        <li> <a href="Formulier/DocentenBoekenInvoeren.php">Boek Invoeren</a> </li>
+        <li> <a href="../Boekenpagina.php">Bekijken</a> </li>
+        <li> <a href="FormulierBoeken.php">Lenen</a> </li>
+        <li> <a href="FormulierReserverenBoeken.php">Reserveren</a> </li>
+        <li> <i class="fa-solid fa-star"></i><li><a href="Formulier/DocentenBoekenInvoeren.php">Boek Invoeren</a> </li>
     </ul>
     </div>
 </nav> 
@@ -44,6 +44,13 @@
 </form>
 
 </div>
+<footer> <!-- footer (Gaby) --> 
+            <p>   
+        Heb je een vraag? Mail dan naar BoekenBieb@outlook.com.
+        <br>
+         Wij zijn op de mail bereikbaar op maandag t/m vrijdag van 11:00 tot 16:00 uur. 
+            </p>
+        </footer>
 
 </body>
 </html>

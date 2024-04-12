@@ -10,7 +10,7 @@
 <body>
 
 <nav> <!-- Navigatie (Gaby)---> 
-    <ul> <li><a href="Ingelogde_student.php">Hoofdpagina</a></li> </ul> 
+    <ul> <li><a href="../Ingelogde_student.php">Hoofdpagina</a></li> </ul> 
     
     <div class="dropdown"> <!-- Dropdown boeken --> 
         <button class="navButton">Boeken</button>
@@ -20,7 +20,6 @@
         <li> <a href="FormulierReserverenBoeken.php">Reserveren</a> </li>
     </ul>
     </div>
-    <ul> <li><a href="../ProfielBewerken.php">Profiel Bewerken </a></li></ul> 
 </nav> 
 
 

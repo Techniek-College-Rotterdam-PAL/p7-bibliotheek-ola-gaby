@@ -10,7 +10,7 @@
 <body>
 
 <nav> <!-- Navigatie (Gaby)---> 
-    <ul> <li><a href="Ingelogde_student.php">Hoofdpagina</a></li> </ul> 
+    <ul> <li><a href="../Ingelogde_student.php">Hoofdpagina</a></li> </ul> 
     
     <div class="dropdown"> <!-- Dropdown boeken --> 
         <button class="navButton">Boeken</button>
@@ -20,7 +20,6 @@
         <i class="fa-solid fa-star"></i><li> <a href="FormulierReserverenBoeken.php">Reserveren</a> </li>
     </ul>
     </div>
-    <ul> <li><a href="../ProfielBewerken.php">Profiel Bewerken </a></li></ul> 
 </nav> 
 
 <h1> Boeken Reserveren formulier </h1> 
@@ -35,6 +34,9 @@
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
 
+        <label for="wachtwoord">Wachtwoord</label>
+        <input type="password" id="wachtwoord" name="wachtwoord" required>
+
         <label for="boeken">Kies uw boek:</label>
              <select id="boeken" name="boeken">
                   <option value="Harry Potter en de gevangene van Azkaban">Harry Potter en de gevangene van Azkaban</option>
@@ -45,15 +47,10 @@
                   <option value="De Joodsche Raad">De Joodsche Raad</option>
                 <option value=""></option>
              </select>
-             <label for="datum">Uitleen datum:</label>
-             <input type="date" id="datum" name="datum">
+             <label for="begindatum">Begindatum:</label>
+             <input type="date" id="begindatum" name="begindatum" required>
              <label for="datum">Einddatum:</label>
-             <input type="date" id="einddatum" name="datum">
-
-
-        
-
-
+             <input type="date" id="einddatum" name="einddatum" required>
         <input type="submit" name="submit" value="Verstuur">
 
     </form> 
