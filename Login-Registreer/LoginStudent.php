@@ -40,7 +40,7 @@ session_start();
    <p div class="midden">Vul de formulier hieronder in om in te loggen als student </p>
     <div class="midden">
 
-    <form class="formulier" action="../Database/Inlog.php" method="post">
+    <form class="formulier" action="../Database/InlogStudent.php" method="post">
         <label for="email">Gebruikersnaam of email</label>
         <input type="text" id="email" name="email" required>
 

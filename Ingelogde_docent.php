@@ -40,10 +40,10 @@ try {
     <div class="dropdown"> <!-- Dropdown boeken --> 
         <button class="navButton">Boeken</button>
     <ul class="subDropdown">
-        <li> <a href="Boekenpagina.php">lijst </a> </li>
+        <li> <a href="">lijst </a> </li>
         <li> <a href="">Lenen lijst</a> </li>
         <li> <a href="">Reserveren lijst</a> </li>
-        <li> <a href="">Boek Invoeren</a> </li>
+        <li> <a href="Database/BoekenInvoeren.php">Boek Invoeren</a> </li>
     </ul>
     </div>
 </nav> 
