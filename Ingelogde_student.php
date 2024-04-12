@@ -6,12 +6,14 @@ require_once "Database/Conn.php";
 try {
     // Define query to select values from the users table
     $stmt = "SELECT * FROM gebruiker WHERE gebruiker_id=:gebruiker_id";
+    $stmt = "SELECT * FROM gebruiker WHERE gebruikersnaam=:gebruikersnaam";
 
     // Prepare the statement
     $query = $db_conn->prepare($stmt);
 
     // Bind the parameters
-    $query->bindParam(':gebruiker_id', $_SESSION['gebruiker_session']);
+    $query->bindParam(':gebruiker_id', $_SESSION['gebruiker']);
+    $query->bindParam(':gebruikersnaam', $_SESSION['gebruikersnaam']);
 
     // Execute the query
     $query->execute();
