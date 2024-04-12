@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-require_once "Conn.php"; // database connectie (Ola)
+require_once "Conn2.php"; // database connectie (Ola)
 
 // Zorg ervoor dat alle ingevoerde code eruit wordt gehaald(Ola)
 $naam = strip_tags($_POST["Naam"]);

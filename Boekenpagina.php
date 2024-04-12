@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="HoofdCss.css">
     <style>
-        .book-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .book {
-            width: calc(33.33% - 20px);
-            margin-bottom: 20px;
-        }
-    </style>
+    .book-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .book {
+        width: calc(30% - 20px); 
+        margin-bottom: 20px;
+    }
+</style>
 </head>
 <body>
  
@@ -80,11 +80,11 @@ class Book {
  
     // Haal alle boeken op uit de database
     public function getAllBooks() {
-        $sql = "SELECT *, COUNT(*), AS Voorraad FROM boeken";
-        $stmt = $this->db->conn->query($sql);
-        $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $books;
-    }
+    $sql = "SELECT *, COUNT(*) FROM boeken";
+    $stmt = $this->db->conn->query($sql);
+    $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $books;
+}
     // Toon boeken
     public function displayBooks($books) {
         foreach ($books as $book) {

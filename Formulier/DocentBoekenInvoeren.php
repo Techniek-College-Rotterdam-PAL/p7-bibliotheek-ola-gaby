@@ -29,23 +29,23 @@
 <h1> Boek Invoeren </h1> 
 <p div class="midden">Vul de formulier hieronder in om een nieuwe boek in te voeren </p>
      <div class="midden"> 
-    <form class="formulier" action="../Database/BoekenInvoeren.php" method="post"> 
-        <label for="gebruikersnaam">Naam</label>
-        <input type="text" id="gebruikersnaam" name="gebruikersnaam" required>
+     <form class="formulier" action="../Database/BoekenInvoeren.php" method="post" enctype="multipart/form-data"> 
+    <label for="Naam">Naam</label>
+    <input type="text" id="Naam" name="Naam" required>
 
-        <label for="wachtwoord">Auteur</label>
-        <input type="password" id="wachtwoord" name="wachtwoord" required>
+    <label for="Auteur">Auteur</label>
+    <input type="text" id="Auteur" name="Auteur" required>
 
-        <label for="email">Samenvatting</label>
-        <input type="email" id="email" name="email" required>
+    <label for="Samenvatting">Samenvatting</label>
+    <input type="text" id="Samenvatting" name="Samenvatting" required>
 
-        <label for="afbeelding">Afbeelding</label>
-        <input type="file" id="afbeelding" name="afbeelding"> 
+    <label for="afbeelding">Afbeelding</label>
+    <input type="file" id="afbeelding" name="afbeelding">
 
+    <input type="submit" name="submit" value="Verstuur">
+</form>
 
-        <input type="submit" name="submit" value="Verstuur">
-</div> 
-    </form> 
+</div>
 
 </body>
 </html>
