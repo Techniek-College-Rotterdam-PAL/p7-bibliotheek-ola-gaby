@@ -24,8 +24,10 @@
 </nav> 
 
 <h1> Boeken Reserveren formulier </h1> 
+<p div class="midden">Vul de formulier hieronder in om een boek te reserveren </p>
 
-    <form class="formulier" action="Database/" method="post"> 
+<div class="midden"> 
+    <form class="formulier" action="../Database/BoekenReserveren.php" method="post"> 
         
         <label for="gebruikersnaam">Gebruikersnaam</label>
         <input type="text" id="gebruikersnaam" name="gebruikersnaam" required>
@@ -33,12 +35,35 @@
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
 
+        <label for="boeken">Kies uw boek:</label>
+             <select id="boeken" name="boeken">
+                  <option value="Harry Potter en de gevangene van Azkaban">Harry Potter en de gevangene van Azkaban</option>
+                  <option value="Harry Potter en de vuurbeker">Harry Potter en de vuurbeker</option>
+                  <option value="Atlas: the Story of Pa Salt">Atlas: the Story of Pa Salt</option>
+                  <option value="Eén raam, geen sleutel">Eén raam, geen sleutel</option>
+                  <option value="De spionne">De spionne</option>
+                  <option value="De Joodsche Raad">De Joodsche Raad</option>
+                <option value=""></option>
+             </select>
+             <label for="datum">Uitleen datum:</label>
+             <input type="date" id="datum" name="datum">
+             <label for="datum">Einddatum:</label>
+             <input type="date" id="einddatum" name="datum">
+
+
         
 
 
         <input type="submit" name="submit" value="Verstuur">
 
     </form> 
-
+</div>
+    <footer> <!-- footer (Gaby) --> 
+            <p>   
+        Heb je een vraag? Mail dan naar BoekenBieb@outlook.com.
+        <br>
+         Wij zijn op de mail bereikbaar op maandag t/m vrijdag van 11:00 tot 16:00 uur. 
+            </p>
+        </footer>
 </body>
 </html>

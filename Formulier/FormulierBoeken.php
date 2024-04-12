@@ -25,7 +25,8 @@
 
 
 <h1> Boeken lenen formulier </h1> 
-
+<p div class="midden">Vul de formulier hieronder in om een boek te lenen </p>
+     <div class="midden"> 
     <form class="formulier" action="Database/" method="post"> 
         <label for="gebruikersnaam">Gebruikersnaam</label>
         <input type="text" id="gebruikersnaam" name="gebruikersnaam" required>
@@ -53,8 +54,14 @@
 
 
         <input type="submit" name="submit" value="Verstuur">
-
+</div> 
     </form> 
-
+    <footer> <!-- footer (Gaby) --> 
+            <p>   
+        Heb je een vraag? Mail dan naar BoekenBieb@outlook.com.
+        <br>
+         Wij zijn op de mail bereikbaar op maandag t/m vrijdag van 11:00 tot 16:00 uur. 
+            </p>
+        </footer>
 </body>
 </html>

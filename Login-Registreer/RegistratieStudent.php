@@ -28,7 +28,8 @@
 </nav>
 
     <h1> Registratie formulier voor studenten </h1> 
-
+    <p div class="midden">Vul de formulier hieronder in om te registeren als student </p>
+      <div class="midden"> 
     <form class="formulier" action="../Database/Registratie.php" method="post"> 
         <label for="voornaam">Voornaam</label>
         <input type="text" id="voornaam" name="voornaam" required>
@@ -51,6 +52,7 @@
         <input type="submit" name="submit" value="Registreren">
 
     </form> 
+      </div>
 
     <!-- code om alleen met een studenten email of een docenten email te kunnen registreren (Ola) --> 
     <script>

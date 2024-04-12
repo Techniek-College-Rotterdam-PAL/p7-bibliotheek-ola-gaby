@@ -35,16 +35,6 @@
 
 </nav>
 
-
-
-s
-   
-
-
-
-
-
-
 <article>
         <h1> Boeken bieb </h1> 
          <div class="Flex"> <!-- Om img en p naast elkaar te zetten (Gaby)-->
