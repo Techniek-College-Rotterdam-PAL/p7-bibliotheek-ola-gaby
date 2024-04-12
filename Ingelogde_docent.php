@@ -2,18 +2,26 @@
 session_start();
 require_once "Database/Conn.php";
 
-$stmt = "SELECT * FROM gebruiker WHERE gebruikersnaam = :un";
-  $stmt = $conn->prepare($stmt);
-  $stmt->execute(["un" => $_SESSION["gebruikersnaam"]]);
-  $account_data = $stmt->fetch(PDO::FETCH_OBJ);
+try {
+    // Define query to select values from the users table
+    $stmt = "SELECT * FROM docent WHERE docent_id=:docent_id";
+    $stmt = "SELECT * FROM docent WHERE gebruikersnaam=:gebruikersnaam";
 
-$gebruikersnaam = $account_data->gebruikersnaam;
-$account_email = $account_data->email;
-$account_id = $account_data->id;
+    // Prepare the statement
+    $query = $db_conn->prepare($stmt);
 
-$_SESSION["gebruikersnaam"] = $gebruikersnaam;
-$_SESSION["account_id"] = $account_id;
-$_SESSION["email"] = $account_email;
+    // Bind the parameters
+    $query->bindParam(':docent_id', $_SESSION['docent']);
+    $query->bindParam(':gebruikersnaam', $_SESSION['gebruikersnaam']);
+
+    // Execute the query
+    $query->execute();
+
+    // Return row as an array indexed by both column name
+    $returned_row = $query->fetch(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    array_push($errors, $e->getMessage());
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,10 +40,10 @@ $_SESSION["email"] = $account_email;
     <div class="dropdown"> <!-- Dropdown boeken --> 
         <button class="navButton">Boeken</button>
     <ul class="subDropdown">
-        <li> <a href="Boekenpagina.php">Bekijken</a> </li>
-        <li> <a href="Formulier/FormulierBoeken.php">Lenen</a> </li>
-        <li> <a href="Formulier/FormulierReserverenBoeken.php">Reserveren</a> </li>
-        <li> <a href="Formulier/DocentenBoekenInvoeren.php">Boek Invoeren</a> </li>
+        <li> <a href="Boekenpagina.php">lijst </a> </li>
+        <li> <a href="">Lenen lijst</a> </li>
+        <li> <a href="">Reserveren lijst</a> </li>
+        <li> <a href="">Boek Invoeren</a> </li>
     </ul>
     </div>
 </nav> 

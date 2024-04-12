@@ -23,7 +23,7 @@ class Registratie {
     {
         try {
             $user_hashed_password = password_hash($this->wachtwoord, PASSWORD_DEFAULT);
-            $stmt = "INSERT INTO gebruiker(voornaam, achternaam, email, gebruikersnaam, wachtwoord) VALUES(:voornaam,:achternaam,:email,:gebruikersnaam, :wachtwoord)";
+            $stmt = "INSERT INTO docent(voornaam, achternaam, email, gebruikersnaam, wachtwoord) VALUES(:voornaam,:achternaam,:email,:gebruikersnaam, :wachtwoord)";
             $query = $this->db_conn->prepare($stmt);
             $query->bindParam(":voornaam", $this->voornaam);
             $query->bindParam(":achternaam", $this->achternaam);
@@ -48,11 +48,13 @@ if (isset($_POST['submit'])) {
 
     $account = new Registratie($db_conn, $voornaam, $achternaam, $email, $gebruikersnaam, $wachtwoord);
     if ($account->register()) { 
-        echo "Registration successful!";
+        header("location: ../Ingelogde_docent.php");
         // Redirect the user to another page or perform further actions upon successful registration
     } else {
-        echo "Failed to register user!";
-        // Handle the registration failure, show error message, or redirect to registration page
+        echo '<script type="text/javascript">'; 
+        echo 'alert("Het is niet gelukt om te registreren! Probeer opnieuw");';
+        echo 'window.location.href = "../Login-Registreer/RegistratieDocent.php";';
+        echo '</script>';
     }
 }
 ?>
