@@ -69,6 +69,7 @@ class Book {
             echo "<p>Auteur: " . $book['Auteur'] . "</p>";
             echo "<p>Taal: " . $book['Taal'] . "</p>";
             echo "<p>Samenvatting: " . $book['Samenvatting'] . "</p>";
+            echo "<img>afbeelding: " . $book['afbeelding'] . "</img>";
             echo "</div>";
         }
     }
