@@ -37,8 +37,7 @@
             $db = new Database();
             $boek = new Boek($db);
             $boeken = $boek->getAllboeken();
-            $book->displayboeken
-        $boeken($boeken);
+            $book->displayBoek($boeken);
         ?>
     </div>
  
@@ -87,7 +86,7 @@ class Boek {
         return $boeken;
     }
     // Toon boeken
-    public function displayboeken$boeken($boeken) {
+    public function displayBoek($boeken) {
         foreach ($boeken as $boek) {
             echo "<div class='book'>";
             echo "<h2>" . $boek['gebruikersnaam'] . "</h2>";
