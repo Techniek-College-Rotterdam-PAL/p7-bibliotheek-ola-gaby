@@ -4,17 +4,35 @@
 <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/ecd9dddd0d.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="HoofdCss.css">
+    <link rel="stylesheet" href="../hoofdCss.css">
     <title>Inloggen</title>
    
 </head>
 <body>
-<nav>
-    <ul> <li><a href="Hoofdpagina.php">Hoofdpagina</a></li> </ul> 
-    <ul> <li><a href="Boekenpagina.php">Boeken</a></li> </ul> 
-    <ul> <i class="fa-solid fa-star"></i> <li><a href="Loginpagina.php">Login</a></li> </ul> 
-    <ul> <li><a href="Registratiepagina.php">Registreer</a></li> </ul>  
-</nav> 
+<nav> <!-- Navigatie 1 (trello) Gaby--> 
+    <ul> <li><a href="../Hoofdpagina.php">Hoofdpagina</a></li> </ul> 
+    <div class="dropdown"> <!-- Dropdown registratie --> 
+        <button class="navButton">Registreer</button>
+    <ul class="subDropdown">
+        <li> <a href="../Login-Registreer/RegistratieStudent.php">Student Registratie</a> </li>
+        <li> <a href="../Login-Registreer/RegistratieDocent.php">Docent Registratie</a> </li>
+    </ul>
+    </div>
+
+    <div class="dropdown"> <!-- Dropdown Login --> 
+        <button class="navButton">Log In</button>
+    <ul class="subDropdown">
+        <li> <a href="../Login-Registreer/LoginStudent.php">Student Login</a> </li>
+        <li> <a href="../Login-Registreer/LoginDocent.php">Docent Login</a> </li>
+    </ul>
+    </div>
+
+    <form action="/">  <!-- Searchbar toegevoegd in de navigatie (Ola)--->
+      <input type="text" placeholder="Zoeken.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+</nav>
 
    <h1> Log in formulier </h1> 
    <p> 

@@ -72,12 +72,20 @@ $book->displayBooks($books);
 </head>
 <body>
 
-<nav>
-    <ul> <li><a href="Hoofdpagina.php">Hoofdpagina</a></li> </ul> 
-    <ul> <i class="fa-solid fa-star"></i><li><a href="Boekenpagina.php">Boeken</a></li> </ul> 
-    <ul> <li><a href="Loginpagina.php">Login</a></li> </ul> 
-    <ul> <li><a href="Registratiepagina.php">Registreer</a></li> </ul>  
+<nav> <!-- Navigatie (Gaby)---> 
+    <ul> <li><a href="Ingelogde_student.php">Hoofdpagina</a></li> </ul> 
+    
+    <div class="dropdown"> <!-- Dropdown boeken --> 
+        <button class="navButton">Boeken</button>
+    <ul class="subDropdown">
+         <i class="fa-solid fa-star"></i><li> <a href="Boekenpagina.php">Bekijken</a> </li>
+        <li> <a href="Formulier/FormulierBoeken.php">Lenen</a> </li>
+        <li> <a href="Formulier/FormulierReserverenBoeken.php">Reserveren</a> </li>
+    </ul>
+    </div>
+    <ul> <li><a href="ProfielBewerken.php">Profiel Bewerken </a></li></ul> 
 </nav> 
+
 
 </body>
 </html>

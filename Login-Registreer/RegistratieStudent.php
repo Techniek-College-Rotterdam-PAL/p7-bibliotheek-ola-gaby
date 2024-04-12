@@ -5,19 +5,31 @@
     <script src="https://kit.fontawesome.com/ecd9dddd0d.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registreren</title>
-    <link rel="stylesheet" href="HoofdCss.css">
+    <link rel="stylesheet" href="../hoofdCss.css">
 </head>
 <body>
-<nav>
-    <ul> <li><a href="Hoofdpagina.php">Hoofdpagina</a></li> </ul> 
-    <ul> <li><a href="Boekenpagina.php">Boeken</a></li> </ul> 
-    <ul><li><a href="Loginpagina.php">Login</a></li> </ul> 
-    <ul>  <i class="fa-solid fa-star"></i> <li><a href="Registratiepagina.php">Registreer</a></li> </ul>  
-</nav> 
+<nav> <!-- Navigatie 1 (trello) Gaby--> 
+    <ul> <li><a href="../Hoofdpagina.php">Hoofdpagina</a></li> </ul> 
+    <div class="dropdown"> <!-- Dropdown registratie --> 
+        <button class="navButton">Registreer</button>
+    <ul class="subDropdown">
+        <i class="fa-solid fa-star"></i> <li> <a href="RegistratieStudent.php">Student Registratie</a> </li>
+        <li> <a href="RegistratieDocent.php">Docent Registratie</a> </li>
+    </ul>
+    </div>
 
-    <h1> Registratie formulier </h1> 
+    <div class="dropdown"> <!-- Dropdown Login --> 
+        <button class="navButton">Log In</button>
+    <ul class="subDropdown">
+       <li> <a href="LoginStudent.php">Student Login</a> </li>
+        <li> <a href="LoginDocent.php">Docent Login</a> </li>
+    </ul>
+    </div>
+</nav>
 
-    <form class="formulier" action="Database/Registratie.php" method="post"> 
+    <h1> Registratie formulier voor studenten </h1> 
+
+    <form class="formulier" action="../Database/Registratie.php" method="post"> 
         <label for="voornaam">Voornaam</label>
         <input type="text" id="voornaam" name="voornaam" required>
 

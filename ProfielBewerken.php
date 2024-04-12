@@ -15,8 +15,16 @@ require_once "Database/Conn.php";
 </head>
 <body>
 <nav> <!-- Navigatie (Gaby)---> 
-    <ul> <li><a href="Ingelogde_gebruiker.php">Hoofdpagina</a></li> </ul> 
-    <ul> <li><a href="Boekenpagina.php">Boeken</a></li> </ul> 
+    <ul> <li><a href="Ingelogde_student.php">Hoofdpagina</a></li> </ul> 
+    
+    <div class="dropdown"> <!-- Dropdown boeken --> 
+        <button class="navButton">Boeken</button>
+    <ul class="subDropdown">
+        <li> <a href="Boekenpagina.php">Bekijken</a> </li>
+        <li> <a href="Formulier/FormulierBoeken.php">Lenen</a> </li>
+        <li> <a href="Formulier/FormulierReserverenBoeken.php">Reserveren</a> </li>
+    </ul>
+    </div>
     <ul> <i class="fa-solid fa-star"></i><li><a href="ProfielBewerken.php">Profiel Bewerken </a></li></ul> 
 </nav> 
 

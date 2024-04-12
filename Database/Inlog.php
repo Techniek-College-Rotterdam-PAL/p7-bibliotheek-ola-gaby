@@ -23,11 +23,11 @@
         if (password_verify($wachtwoord, $result['wachtwoord'])) {
          $_SESSION["gebruikersnaam"] = $gebruikersnaam;
         
-         header("location: ../Ingelogde_gebruiker.php");
+         header("location: ../Ingelogde_student.php");
 
         //bij foute inloggegeven komt er een foutmelding op het scherm (Ola)
          } else {
-          header("location: ../FoutInlogFormulier.php");
+          header("location: ../Formulier/FoutInlogFormulier.php");
          }
 } 
 ?>
