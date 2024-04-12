@@ -80,7 +80,7 @@ class Book {
  
     // Haal alle boeken op uit de database
     public function getAllBooks() {
-        $sql = "SELECT *, COUNT(*), AS Voorraad FROM boeken";
+        $sql = "SELECT * FROM boeken";
         $stmt = $this->db->conn->query($sql);
         $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $books;
@@ -94,7 +94,6 @@ class Book {
             echo "<p>Auteur: " . $book['Auteur'] . "</p>";
             echo "<p>Taal: " . $book['Taal'] . "</p>";
             echo "<p>Samenvatting: " . $book['Samenvatting'] . "</p>";
-            echo "<p>Voorraad: " . $book['Voorraad'] . "</p>";
             echo "</div>";
         }
     }
