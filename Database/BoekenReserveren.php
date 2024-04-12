@@ -3,7 +3,7 @@
 session_start();
 require_once "Conn.php";
 
-// Zorg ervoor dat alle ingevoerde code eruit wordt gehaald(Ola)
+// Zorg ervoor dat alle ingevoerde code eruit wordt gehaald(Gaby)
 $gebruikersnaam = strip_tags($_POST["gebruikersnaam"]);
 $wachtwoord = strip_tags($_POST["wachtwoord"]);
 $email = strip_tags($_POST["email"]);
@@ -13,8 +13,8 @@ $einddatum = strip_tags($_POST["einddatum"]);
 
 
 
-// Plaats de ingevulde gegevens in de database (Ola)
-$insert_user = $conn->prepare("INSERT INTO lenen (boeken, begindatum, einddatum) VALUES( :boeken, :begindatum, :einddatum )");
+// Plaats de ingevulde gegevens in de database (Gaby)
+$insert_user = $conn->prepare("INSERT INTO reserveren (boeken, begindatum, einddatum) VALUES( :boeken, :begindatum, :einddatum )");
 
     $insert_user->bindParam(":boeken", $boeken);
     $insert_user->bindParam(":begindatum", $begindatum);
@@ -29,13 +29,13 @@ $insert_user = $conn->prepare("INSERT INTO lenen (boeken, begindatum, einddatum)
     //
     if ($result) {
 
-        //code om de gebruikersnaam in de header van de pagina te laten zien (Ola)
+        //code om de gebruikersnaam in de header van de pagina te laten zien (Gaby)
         if (password_verify($wachtwoord, $result['wachtwoord'])) {
          $_SESSION["gebruikersnaam"] = $gebruikersnaam;
         
          header("location: ../Ingelogde_student.php");
 
-        //bij foute inloggegeven komt er een foutmelding op het scherm (Ola)
+        //bij foute inloggegeven komt er een foutmelding op het scherm (Gaby)
          } else {
           header("location: ../FoutInlogFormulier.php");
          }

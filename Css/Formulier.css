@@ -1,13 +1,12 @@
 .formulier {
     display:flex;
-    justify-content: center;
     padding: 30px;
     flex-direction: column;
     background-color: rgb(97, 2, 2);
     border-radius: 10px;
     font-size: 30px;
     font-weight: bold;
-    width: 80%;
+    width: 800px;
 }
 
 .formulier label {
@@ -26,3 +25,10 @@ form input {
 form input[type=sumbit]{
     width: fit-content;
 }
+
+.profiel {
+    display: flex;
+    justify-content: center;
+}
+
+
