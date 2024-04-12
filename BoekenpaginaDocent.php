@@ -20,17 +20,17 @@
 <body>
  
 <nav> <!-- Navigatie (Gaby)---> 
-    <ul> <li><a href="Ingelogde_student.php">Hoofdpagina</a></li> </ul> 
+    <ul> <i class="fa-solid fa-star"></i><li><a href="Ingelogde_docent.php">Hoofdpagina</a></li> </ul> 
     
     <div class="dropdown"> <!-- Dropdown boeken --> 
         <button class="navButton">Boeken</button>
     <ul class="subDropdown">
-         <i class="fa-solid fa-star"></i><li> <a href="Boekenpagina.php">Bekijken</a> </li>
+        <li> <a href="Boekenpagina.php">Bekijken</a> </li>
         <li> <a href="Formulier/FormulierBoeken.php">Lenen</a> </li>
         <li> <a href="Formulier/FormulierReserverenBoeken.php">Reserveren</a> </li>
+        <li> <a href="Formulier/DocentenBoekenInvoeren.php">Boek Invoeren</a> </li>
     </ul>
     </div>
-    <ul> <li><a href="ProfielBewerken.php">Profiel Bewerken </a></li></ul> 
 </nav> 
 <div class="book-container">
         <?php
