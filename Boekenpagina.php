@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="HoofdCss.css">
     <style>
-    .book-container {
+    .boek-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    .book {
-        width: calc(30% - 20px); 
-        margin-bottom: 20px;
-    }
+    .cards {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+        }
+    .cards img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
 </style>
 </head>
 <body>
@@ -30,8 +36,30 @@
         <li> <a href="Formulier/FormulierReserverenBoeken.php">Reserveren</a> </li>
     </ul>
     </div>
+<<<<<<< Updated upstream
+=======
+    <ul> <li><a href="ProfielBewerken.php">Profiel Bewerken </a></li></ul> 
+    <input type="text" id="search" placeholder="Search...">
+    <div id="search-results"></div>
+>>>>>>> Stashed changes
 </nav> 
-<div class="book-container">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#search').on('keyup', function(){
+        var query = $(this).val();
+        $.ajax({
+            url: 'zoekbalk.php',
+            method: 'POST',
+            data: {query: query},
+            success: function(data){
+                $('#search-results').html(data);
+            }
+        });
+    });
+});
+</script>
+<div class="boek-container">
         <?php
             $db = new Database();
             $book = new Book($db);
@@ -79,7 +107,7 @@ class Book {
  
     // Haal alle boeken op uit de database
     public function getAllBooks() {
-    $sql = "SELECT *, COUNT(*) FROM boeken";
+    $sql = "SELECT * FROM boeken";
     $stmt = $this->db->conn->query($sql);
     $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $books;
@@ -87,13 +115,14 @@ class Book {
     // Toon boeken
     public function displayBooks($books) {
         foreach ($books as $book) {
-            echo "<div class='book'>";
+            echo "<div class='cards'>";
+            echo "<figure>";
             echo '<img src="data:image/jpeg;base64,'.base64_encode($book['afbeelding']) .'" />';
+            echo "</figure>"; 
             echo "<h2>" . $book['Naam'] . "</h2>";
             echo "<p>Auteur: " . $book['Auteur'] . "</p>";
             echo "<p>Taal: " . $book['Taal'] . "</p>";
             echo "<p>Samenvatting: " . $book['Samenvatting'] . "</p>";
-            echo "<p>Voorraad: " . $book['Voorraad'] . "</p>";
             echo "</div>";
         }
     }

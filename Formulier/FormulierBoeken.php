@@ -26,7 +26,7 @@
 <h1> Boeken lenen formulier </h1> 
 <p div class="midden">Vul de formulier hieronder in om een boek te lenen </p>
      <div class="midden"> 
-    <form class="formulier" action="Database/" method="post"> 
+    <form class="formulier" action="../Database/BoekLenen.php" method="post"> 
         <label for="gebruikersnaam">Gebruikersnaam</label>
         <input type="text" id="gebruikersnaam" name="gebruikersnaam" required>
 

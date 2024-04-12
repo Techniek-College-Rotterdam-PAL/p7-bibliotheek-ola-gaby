@@ -24,6 +24,7 @@ $insert_user = $conn->prepare("INSERT INTO reserveren (boeken, begindatum, eindd
    
 
   
+<<<<<<< Updated upstream
   
     if ($insert_user->execute()) {
     
@@ -43,4 +44,21 @@ $insert_user = $conn->prepare("INSERT INTO reserveren (boeken, begindatum, eindd
          }
         
  
+=======
+//Gegevens ophalen uit de daatabase om het vervolgens in een overzicht te zetten voor de docent zodat hij kan zien wie welke boek heeft uitgeleend (Ola)
+    $query = $conn->prepare("SELECT * FROM gebruiker WHERE gebruikersnaam = :gebruikersnaam");
+    $query->bindParam(":gebruikersnaam", $gebruikersnaam);
+    $query->execute();
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+
+    //
+    if ($insert_user->execute()) {
+        // Gegevens succesvol toegevoegd aan de database, stuur de gebruiker terug naar dezelfde pagina
+        header("Location:../Formulier/FormulierReserverenBoeken.php");
+        exit();
+    } else {
+        // Fout bij het toevoegen van gegevens aan de database
+        echo "Er is een fout opgetreden bij het toevoegen van gegevens aan de database.";
+    }
+>>>>>>> Stashed changes
 ?>

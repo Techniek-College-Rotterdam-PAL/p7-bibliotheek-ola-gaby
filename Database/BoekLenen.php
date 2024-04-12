@@ -14,23 +14,19 @@ $einddatum = strip_tags($_POST["einddatum"]);
 
 
 // Plaats de ingevulde gegevens in de database (Ola)
-$insert_user = $conn->prepare("INSERT INTO lenen (boeken, begindatum, einddatum) VALUES( :boeken, :begindatum, :einddatum )");
+$insert_user = $conn->prepare("INSERT INTO uitgeleend (boeken, begindatum, einddatum) VALUES( :boeken, :begindatum, :einddatum )");
 
     $insert_user->bindParam(":boeken", $boeken);
     $insert_user->bindParam(":begindatum", $begindatum);
     $insert_user->bindParam(":einddatum", $einddatum);
 
-// Voer de query uit om het boek uit te lenen
-if ($insert_user->execute()) {
-    // Boek is succesvol uitgeleend, update de voorraad
-    $update_stock = $conn->prepare("UPDATE boeken SET Voorraad = Voorraad - 1 WHERE Voorraad = :boeken");
-    $update_stock->bindParam(":boeken", $boeken);
-    $update_stock->execute();
-    
-    echo "<p>Bedankt, het boek '$boeken' is succesvol uitgeleend.</p>";
-} else {
-    echo "<p>Er is een fout opgetreden bij het uitlenen van het boek. Probeer het later opnieuw.</p>";
-}
-?>
-  
+    if ($insert_user->execute()) {
+        // Gegevens succesvol toegevoegd aan de database, stuur de gebruiker terug naar dezelfde pagina
+        echo '<div class="success-message">Het formulier is succesvol verzonden!</div>';
+        header("Location:../Formulier/FormulierBoeken.php");
+        exit();
+    } else {
+        // Fout bij het toevoegen van gegevens aan de database
+        echo "Er is een fout opgetreden bij het toevoegen van gegevens aan de database.";
+    }
 ?>
