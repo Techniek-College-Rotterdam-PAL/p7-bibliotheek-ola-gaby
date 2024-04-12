@@ -36,13 +36,13 @@ require_once "Database/Conn.php";
 <div class="profiel"> 
 <?php
 
-      $gebruiker = $_SESSION['gebruikersnaam'];
+      $account = $_SESSION['gebruikersnaam'];
       $query = $conn->prepare("SELECT * FROM gebruiker WHERE Gebruikersnaam = :gebruikersnaam");
-      $query->bindParam(':gebruikersnaam', $gebruiker);
+      $query->bindParam(':gebruikersnaam', $account);
       $query->execute();
 
       $resultaat = $query->fetchAll();
-      foreach ($resultaat as $gebruiker) {
+      foreach ($resultaat as $account) {
         // Stuurt de gegevens naar ProfielBewerkenData + profiel bewerken formulier (Gaby)
         echo '<div class="post">
         <form class="formulier" action="Database/ProfielBewerkenData.php" method="post"> 

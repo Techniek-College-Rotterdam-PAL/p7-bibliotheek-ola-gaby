@@ -2,17 +2,13 @@
 session_start();
 require_once "Database/Conn.php";
 
-// Check if user is not logged in
-if (!$gebruiker->is_logged_in()) {
-    $gebruiker->redirect('index.php');
-}
 
 try {
     // Define query to select values from the users table
-    $sql = "SELECT * FROM gebruiker WHERE gebruiker_id=:gebruiker_id";
+    $stmt = "SELECT * FROM gebruiker WHERE gebruiker_id=:gebruiker_id";
 
     // Prepare the statement
-    $query = $db_conn->prepare($sql);
+    $query = $db_conn->prepare($stmt);
 
     // Bind the parameters
     $query->bindParam(':gebruiker_id', $_SESSION['gebruiker_session']);
@@ -24,11 +20,6 @@ try {
     $returned_row = $query->fetch(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     array_push($errors, $e->getMessage());
-}
-
-if (isset($_GET['logout']) && ($_GET['logout'] == 'true')) {
-    $gebruiker->log_out();
-    $gebruiker->redirect('index.php');
 }
 
 ?>

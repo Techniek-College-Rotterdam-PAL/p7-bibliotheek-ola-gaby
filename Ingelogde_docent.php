@@ -2,8 +2,8 @@
 session_start();
 require_once "Database/Conn.php";
 
-$sql = "SELECT * FROM gebruiker WHERE gebruikersnaam = :un";
-  $stmt = $conn->prepare($sql);
+$stmt = "SELECT * FROM gebruiker WHERE gebruikersnaam = :un";
+  $stmt = $conn->prepare($stmt);
   $stmt->execute(["un" => $_SESSION["gebruikersnaam"]]);
   $account_data = $stmt->fetch(PDO::FETCH_OBJ);
 
