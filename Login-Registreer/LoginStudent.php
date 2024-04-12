@@ -41,7 +41,7 @@ session_start();
     <div class="midden">
 
     <form class="formulier" action="../Database/InlogStudent.php" method="post">
-        <label for="email">Gebruikersnaam of email</label>
+        <label for="email">Email</label>
         <input type="text" id="email" name="email" required>
 
         <label for="wachtwoord">Wachtwoord</label>

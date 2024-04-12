@@ -16,7 +16,7 @@ class Gebruiker {
     }
 
     public function Inloggen() {
-        $query = "SELECT * FROM gebruiker WHERE email = :email";
+        $query = "SELECT * FROM docent WHERE email = :email";
         $stmt = $this->db_conn->prepare($query);
         $stmt->bindParam(":email", $this->email);
         $stmt->execute();
