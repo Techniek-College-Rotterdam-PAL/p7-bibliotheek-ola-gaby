@@ -27,3 +27,8 @@ body p {
     color: white;
 }
 
+.midden {
+    display: flex;
+    justify-content: center;
+}
+

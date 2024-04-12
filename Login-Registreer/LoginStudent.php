@@ -29,6 +29,8 @@
 </nav>
 
    <h1> Log in formulier voor studenten</h1> 
+   <p div class="midden">Vul de formulier hieronder in om in te loggen als student </p>
+    <div class="midden">
     <form class="formulier" action="../Database/Inlog.php" method="post">
         <label for="gebruikersnaam">Gebruikersnaam</label>
         <input type="text" id="gebruikersnaam" name="gebruikersnaam" required>
@@ -38,6 +40,7 @@
 
         <input type="submit" name="submit" value="Inloggen">
     </form>
+    </div>
 
     <footer> <!-- footer (Gaby) --> 
     <p>   
