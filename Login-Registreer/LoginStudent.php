@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,9 +39,10 @@
    <h1> Log in formulier voor studenten</h1> 
    <p div class="midden">Vul de formulier hieronder in om in te loggen als student </p>
     <div class="midden">
+
     <form class="formulier" action="../Database/Inlog.php" method="post">
-        <label for="gebruikersnaam">Gebruikersnaam</label>
-        <input type="text" id="gebruikersnaam" name="gebruikersnaam" required>
+        <label for="email">Gebruikersnaam of email</label>
+        <input type="text" id="email" name="email" required>
 
         <label for="wachtwoord">Wachtwoord</label>
         <input type="password" id="wachtwoord" name="wachtwoord" required>

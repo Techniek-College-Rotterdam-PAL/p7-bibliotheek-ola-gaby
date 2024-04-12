@@ -1,38 +1,58 @@
-<?php 
+<?php
+require_once 'Conn.php'; // Include the database connection file
 
-session_start();
-require_once "Conn.php"; // database connectie (Gaby)
+class Registratie {
+    private $db_conn;
+    private $voornaam;
+    private $achternaam;
+    private $email;
+    private $gebruikersnaam;
+    private $wachtwoord;
 
-// Zorg ervoor dat alle ingevoerde code eruit wordt gehaald(Gaby)
-$voornaam = strip_tags($_POST["voornaam"]);
-$achternaam = strip_tags($_POST["achternaam"]);
-$email = strip_tags($_POST["email"]);
-$telefoonnummer = strip_tags($_POST["telefoonnummer"]);
-$gebruikersnaam = strip_tags($_POST["gebruikersnaam"]);
-$wachtwoord = strip_tags($_POST["wachtwoord"]);
+    public function __construct($db_conn, $voornaam, $achternaam, $email, $gebruikersnaam, $wachtwoord)
+    {
+        $this->db_conn = $db_conn;
+        $this->voornaam = $voornaam;
+        $this->achternaam = $achternaam;
+        $this->email = $email;
+        $this->gebruikersnaam = $gebruikersnaam;
+        $this->wachtwoord = $wachtwoord;
+    }
 
+    public function register()
+    {
+        try {
+            $user_hashed_password = password_hash($this->wachtwoord, PASSWORD_DEFAULT);
+            $stmt = "INSERT INTO gebruiker(voornaam, achternaam, email, gebruikersnaam, wachtwoord) VALUES(:voornaam,:achternaam,:email,:gebruikersnaam, :wachtwoord)";
+            $query = $this->db_conn->prepare($stmt);
+            $query->bindParam(":voornaam", $this->voornaam);
+            $query->bindParam(":achternaam", $this->achternaam);
+            $query->bindParam(":email", $this->email);
+            $query->bindParam(":gebruikersnaam", $this->gebruikersnaam);
+            $query->bindParam(":wachtwoord", $user_hashed_password);
+            $query->execute();
+            return true;
+        } catch (PDOException $e) {
+            // Handle the error, log it, or show an appropriate message
+            return false;
+        }
+    }
+}
 
+if (isset($_POST['submit'])) {
+    $voornaam = $_POST['voornaam'];
+    $achternaam = $_POST['achternaam'];
+    $email = $_POST['email'];
+    $gebruikersnaam = $_POST['gebruikersnaam']; // Assuming this field exists in your form
+    $wachtwoord = $_POST['wachtwoord'];
 
-// Plaats de ingevulde gegevens in de database (Gaby)
-$insert_user = $conn->prepare("INSERT INTO gebruiker (voornaam,achternaam,email,telefoonnummer,gebruikersnaam, wachtwoord) VALUES( :voornaam, :achternaam, :email, :telefoonnummer, :gebruikersnaam, :wachtwoord)");
-
-    $insert_user->bindParam(":voornaam", $voornaam);
-    $insert_user->bindParam(":achternaam", $achternaam);
-    $insert_user->bindParam(":email", $email);
-    $insert_user->bindParam(":telefoonnummer", $telefoonnummer);
-    $insert_user->bindParam(":gebruikersnaam", $gebruikersnaam);
-    $insert_user->bindParam(":wachtwoord", $hashed_wachtwoord);
-  
-    $password_difficulty = ['difficulty' => 11];
-    $hashed_wachtwoord = password_hash($wachtwoord, PASSWORD_BCRYPT, $password_difficulty);
-
-    $_SESSION["gebruikersnaam"] = $gebruikersnaam;
-    $_SESSION["id"] = $id;
-    //--------------------------------------------------------------------------------------
-
-
- $insert_user->execute(header("location: ../Ingelogde_student.php"));
-  
-
-
+    $account = new Registratie($db_conn, $voornaam, $achternaam, $email, $gebruikersnaam, $wachtwoord);
+    if ($account->register()) { 
+        echo "Registration successful!";
+        // Redirect the user to another page or perform further actions upon successful registration
+    } else {
+        echo "Failed to register user!";
+        // Handle the registration failure, show error message, or redirect to registration page
+    }
+}
 ?>

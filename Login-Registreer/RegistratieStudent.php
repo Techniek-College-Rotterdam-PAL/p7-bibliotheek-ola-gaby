@@ -40,9 +40,6 @@
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required onfocusout="validateForm()">
 
-        <label for="telefoonnummer">Telefoonnummer</label>
-        <input type="tel" id="telefoonnummer" name="telefoonnummer" required>
-
         <label for="gebruikersnaam">Gebruikersnaam</label>
         <input type="text" id="gebruikersnaam" name="gebruikersnaam" required>
 
